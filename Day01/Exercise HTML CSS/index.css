@@ -1,0 +1,76 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Figtree", sans-serif;
+}
+
+.big_container{
+    background-color: white;
+    width: 384px;
+    height: 522px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #000000;
+    padding: 30px 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.gambar01 img{
+    border-radius: 10px;
+    width: 100%;
+    height: 225px;
+    border-radius: 20px;
+}
+
+.btn-1 button{
+    background-color: #F4D04E;
+    border-style: none;
+    width: 82px;
+    height: 29px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.date h5{
+    color: #111;
+    width: 143px;
+    height: 21px;
+    font-weight: 100;
+    margin: px;
+}
+
+.title h2{
+    width: 336px;
+    height: 36px;
+    color: #111;
+}
+
+.paragraf p{
+    color: #6B6B6B;
+    width: 336px;
+    height: 72px;
+    
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+}
+
+.footer img{
+    border-radius: 100%;
+    padding: 5px;
+}
+
+.footer h5 {
+    width: 85px;
+    height: 21px;
+    align-items: center;
+    color: #111;
+}
