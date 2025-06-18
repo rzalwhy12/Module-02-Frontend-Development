@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS : Flex</title>
+    <style>
+        #navbar{
+            display: flex;
+            border: 1px solid red;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 10px;
+        }
+
+        #nav-menu{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <img id="nav-logo" src="abstract-logo-design-for-any-corporate-brand-business-company-vector.jpg" alt="logo perusahaan" width="30px">
+        <ul id="nav-menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <div id="nav-action">
+            <button>Sign in</button>
+            <button>Sign out</button>
+        </div>
+    </nav>
+</body>
+</html>

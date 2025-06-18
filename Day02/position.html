@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS : Position</title>
+    <style>
+        #container{
+            width: 60vw;
+            height: 300vw;
+            border: 2px solid black;
+            margin: auto;
+        }
+
+        #container > div{
+            width: 300px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="static-example" style=" position: static;">
+            <h2>Position Static</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta doloremque, numquam minus nobis in perspiciatis sequi fuga vitae inventore molestiae incidunt magnam provident repellat nihil ullam delectus? Molestias, accusantium!
+            </p>
+        </div>
+        <div id="Relative-example" style=
+        " position: relative; 
+        left: 30px; 
+        top: -20px;
+        background-color: aqua; ">
+            <h2>Position Relative</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta doloremque, numquam minus nobis in perspiciatis sequi fuga vitae inventore molestiae incidunt magnam provident repellat nihil ullam delectus? Molestias, accusantium!
+            </p>
+        </div>
+        <div id="Absolute-example" style=
+        " position: absolute;
+        left: 0px;
+        top: 0px; ">
+            <h2>Position Absolute</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta doloremque, numquam minus nobis in perspiciatis sequi fuga vitae inventore molestiae incidunt magnam provident repellat nihil ullam delectus? Molestias, accusantium!
+            </p>
+        </div>
+        <div id="Fixed-example" style=
+        " position: fixed; right: 10px; bottom: 10px;">
+            <h2>Position Fixed</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta doloremque, numquam minus nobis in perspiciatis sequi fuga vitae inventore molestiae incidunt magnam provident repellat nihil ullam delectus? Molestias, accusantium!
+            </p>
+        </div>
+        <div id="Sticky-example" style=
+        " position: sticky; top: 10px;">
+            <h2>Position Sticky</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta doloremque, numquam minus nobis in perspiciatis sequi fuga vitae inventore molestiae incidunt magnam provident repellat nihil ullam delectus? Molestias, accusantium!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
