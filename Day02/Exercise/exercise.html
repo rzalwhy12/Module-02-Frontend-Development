@@ -5,43 +5,250 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS : Grid</title>
     <style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap');
 
-        #container{
-            border: 1px solid red;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            /* grid-template-columns: 100px 200px 100px; */
-            grid-template-rows: 100px 100px;
-            row-gap: 10px;
-            column-gap: 10px;
-            grid-template-areas: 
-            "area1 area1 area2"
-            "area3 area4 area5";
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+
+    body {
+        background-color: #f0f2f5;
+        padding: 20px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        grid-template-areas:
+            "item1 item1 item2 item3"
+            "item4 item5 item5 item3";
+    }
+
+    .radius {
+        border-radius: 10px;
+        box-shadow: 0px 3px 29px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .item-one {
+        background-color: #733fc8;
+        grid-area: item1;
+        padding: 30px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    .item-two { background-color: #48556a; grid-area: item2; padding: 25px 30px; color: white; }
+    .item-three { background-color: white; grid-area: item3; padding: 25px 30px; color: #48556A; }
+    .item-four { background-color: white; grid-area: item4; padding: 25px; color: #48556A; }
+    .item-five { background-color: #19202d; grid-area: item5; padding: 25px; color: white; }
+
+    .profile {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+.img01 {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 0;
+    opacity: 0.2;
+    width: 150px;
+    height: auto;
+}
+
+    .profile img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .desk-profile p {
+        margin: 0;
+        line-height: 1.4;
+        font-size: 15px;
+    }
+
+    .description-head h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+        font-weight: 600;
+    }
+
+    .descripton-body p {
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            display: flex;
+            flex-direction: column;
         }
-        #item-1{
-            background-color: red;
-            grid-area: area1;
+
+        .item-one, .item-two, .item-three, .item-four, .item-five {
+            width: 100%;
         }
-        #item-2{
-            background-color: blue;
-            grid-area: area2;
+
+        .description-head h2 {
+            font-size: 16px;
         }
-        #item-3{
-            background-color: orange;
-            grid-area: area3;
+
+        .descripton-body p {
+            font-size: 13px;
         }
-        #item-4{
-            background-color: greenyellow;
-            grid-area: area4;
+    }
+
+    @media (max-width: 480px) {
+        body {
+            padding: 10px;
         }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .description-head h2 {
+            font-size: 15px;
+        }
+
+        .descripton-body p {
+            font-size: 12px;
+        }
+    }
     </style>
 </head>
 <body>
-    <div id="container">
-        <div id="item-1"></div>
-        <div id="item-2"></div>
-        <div id="item-3"></div>
-        <div id="item-4"></div>
+    <div class="container">
+
+        <div class="item-one radius">
+            <img class="img01" src="aseet/“ (1).png" alt="" width="60">
+            <div class="profile">
+                <img src="aseet/Oval (1).png" alt="">
+                <div class="desk-profile">
+                    <p style="color: #fff;">Daniel Clifford</p>
+                    <p style="color: #cfcfcf;">Verify Graduate</p>
+                </div>
+            </div>
+            <div class="description-head">
+                <h2>
+                    I received a job offer mid-course, and the subjects I learned were current, if not more so, in the
+                    company I joined. I honestly feel I got every penny’s worth.
+                </h2>
+            </div>
+            <div class="descripton-body">
+                <p>
+                    “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition
+                    and have heard some people who had an amazing experience here. I signed up for the free intro course
+                    and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and
+                    most grueling - time of my life. Since completing the course, I’ve successfully switched careers,
+                    working as a Software Engineer at a VR startup. ”
+                </p>
+            </div>
+        </div>
+
+        <div class="item-two radius">
+            <div class="profile">
+                <img src="aseet/Oval (2).png" alt="">
+                <div class="desk-profile">
+                    <p style="color: #fff;">Jonathan Walters</p>
+                    <p style="color: #cfcfcf;">Verify Graduate</p>
+                </div>
+            </div>
+            <div class="description-head" style="color: #fff;">
+                <h2>
+                    The team was very supportive and kept me motivated
+                </h2>
+            </div>
+            <div class="descripton-body">
+                <p style="color: #cfcfcf; font-size: 18px;">
+                    “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a
+                    big company. This was one of the best investments I’ve made in myself. “
+                </p>
+            </div>
+        </div>
+
+        <div class="item-three radius">
+            <div class="profile">
+                <img src="aseet/Oval (3).png" alt="">
+                <div class="desk-profile">
+                    <p style="color: #48556A;">Kira Whittle</p>
+                    <p style="color: #48556A; font-weight: 200;">Verify Graduate</p>
+                </div>
+            </div>
+            <div class="description-head" style="color: #48556A;">
+                <h2>
+                    Such a life-changing experience. Highly recommended!
+                </h2>
+            </div>
+            <div class="descripton-body">
+                <p style="color: #48556A; font-size: 18px;">
+                    “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
+                    professionals who can help me learn programming step by step. I was encouraged to enroll by a former
+                    student of theirs who can only say wonderful things about the program. The entire curriculum and
+                    staff did not disappoint. They were very hands-on and I never had to wait long for assistance. The
+                    agile team project, in particular, was outstanding. It took my learning to the next level in a way
+                    that no tutorial could ever have. In fact, I’ve often referred to it during interviews as an example
+                    of my developent experience. It certainly helped me land a job as a full-stack developer after
+                    receiving multiple offers. 100% recommend! ”
+                </p>
+            </div>
+        </div>
+
+        <div class="item-four radius">
+            <div class="profile">
+                <img src="aseet/Oval (5).png" alt="">
+                <div class="desk-profile">
+                    <p style="color: #48556A;">Jeanette Harmon</p>
+                    <p style="color: #48556A;">Verify Graduate</p>
+                </div>
+            </div>
+            <div class="description-head" style="color: #48556A;">
+                <h2>
+                    An overall wonderful and rewarding experience
+                </h2>
+            </div>
+            <div class="descripton-body">
+                <p style="color: #48556A; font-size: 18px;">
+                    “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+                    while doing something I love. ”
+                </p>
+            </div>
+        </div>
+
+        <div class="item-five radius">
+            <div class="profile">
+                <img src="aseet/Oval (4).png" alt="">
+                <div class="desk-profile">
+                    <p style="color: #fff;">Patrick Abrams</p>
+                    <p style="color: #cfcfcf;">Verify Graduate</p>
+                </div>
+            </div>
+            <div class="description-head" style="color: #fff;">
+                <h2>
+                    Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
+                    learning from their experiences was easy.
+                </h2>
+            </div>
+            <div class="descripton-body">
+                <p style="color: #cfcfcf;">
+                    “ The staff seem genuinely concerned about my progress which I find really refreshing. The program
+                    gave me the confidence necessary to be able to go out in the world and present myself as a capable
+                    junior developer. The standard is above the rest. You will get the personal attention you need from
+                    an incredible community of smart and amazing people. ”
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
