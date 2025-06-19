@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro DOM</title>
+
+</head>
+<body>
+    <h1 id="title" >Wellcome</h1>
+    <input type="text" id="in-text" placeholder="Masukan Tulisan Baru">
+    <button type="button" onclick="updateText()">Update text</button>
+    <hr />
+    <h2>Calculator</h2>
+    <input type="number" id="angka-1" placeholder="Masukan angka 1">
+    <input type="number" id="angka-2" placeholder="Masukan angka 2">
+    <br />
+    <button type="button" onclick="Calculator1()">+</button>
+    <button type="button" onclick="Calculator2()">-</button>
+    <button type="button" onclick="Calculator3()">*</button>
+    <button type="button" onclick="Calculator4()">/</button>
+    <h3>Hasil : <span id="result"></span> </h3>
+</body>
+<script>
+    function updateText(){
+        const inText = document.getElementById("in-text").value;
+        const elementH1 = document.getElementById("title")
+        elementH1.style.color = "red";
+        elementH1.innerText=inText;
+    }
+//___________________________________________________________
+
+function Calculator1() {
+    const angka1 = parseInt( document.getElementById("angka-1").value);
+    const angka2 = parseInt (document.getElementById("angka-2").value);
+    const hitung = angka1 + angka2;
+    const elemenSPAN = document.getElementById("result");
+    elemenSPAN.innerText = hitung;
+}
+
+function Calculator2() {
+    const angka1 = parseInt( document.getElementById("angka-1").value);
+    const angka2 = parseInt (document.getElementById("angka-2").value);
+    const hitung = angka1 - angka2;
+    const elemenSPAN = document.getElementById("result");
+    elemenSPAN.innerText = hitung;
+}
+
+function Calculator3() {
+    const angka1 = parseInt( document.getElementById("angka-1").value);
+    const angka2 = parseInt (document.getElementById("angka-2").value);
+    const hitung = angka1 * angka2;
+    const elemenSPAN = document.getElementById("result");
+    elemenSPAN.innerText = hitung;
+}
+
+function Calculator4() {
+    const angka1 = parseInt( document.getElementById("angka-1").value);
+    const angka2 = parseInt (document.getElementById("angka-2").value);
+    const hitung = angka1 / angka2;
+    const elemenSPAN = document.getElementById("result");
+    elemenSPAN.innerText = hitung;
+}
+
+</script>
+</html>

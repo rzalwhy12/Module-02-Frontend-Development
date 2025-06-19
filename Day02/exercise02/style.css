@@ -9,7 +9,7 @@
     --ff-fraunces: 'Fraunces', serif;
 }
 
-*, *::before, *::after {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -32,7 +32,6 @@ body {
     max-width: 600px;
     background-color: var(--clr-white);
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     margin: auto;
 }
@@ -50,7 +49,6 @@ body {
 }
 
 .product-details {
-    flex: 1;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -101,7 +99,7 @@ body {
 
 .add-to-cart-btn {
     width: 100%;
-    padding: 15px 0;
+    padding: 15px;
     background-color: var(--clr-primary-dark-cyan);
     color: var(--clr-white);
     border: none;
@@ -114,11 +112,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    transition: background-color 0.2s ease;
-}
-
-.add-to-cart-btn:hover {
-    background-color: hsl(158, 36%, 25%);
 }
 
 @media (max-width: 768px) {
